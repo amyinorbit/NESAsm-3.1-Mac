@@ -1,5 +1,6 @@
 CXX = clang
-CXXFLAGS = -c -O3 -std=c99
+CXXFLAGS = -c -O3 -std=c99 -arch i386 -arch x86_64
+LDFLAGS = -arch i386 -arch x86_64 -mmacosx-version-min=10.5
 DIR = .
 OBJECTS_DIR = $(DIR)/obj/
 OUTPUT_DIR = $(DIR)/build/
@@ -25,7 +26,7 @@ EXE = nesasm
 
 $(EXE): $(FILES)
 	mkdir -p $(OUTPUT_DIR)
-	$(CXX) $(FILES) -o $(OUTPUT_DIR)$@
+	$(CXX) $(LDFLAGS) $(FILES) -o $(OUTPUT_DIR)$@
 
 $(OBJECTS_DIR)%.o: $(SOURCE_DIR)%.c
 	mkdir -p $(OBJECTS_DIR)
