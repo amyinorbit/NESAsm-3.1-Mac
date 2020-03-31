@@ -1,6 +1,6 @@
 CXX = clang
-CXXFLAGS = -c -O3 -std=c99 -arch i386 -arch x86_64
-LDFLAGS = -arch i386 -arch x86_64 -mmacosx-version-min=10.5
+CXXFLAGS = -c -O3 -std=c99 -arch x86_64
+LDFLAGS = -arch x86_64 -mmacosx-version-min=10.7
 DIR = .
 OBJECTS_DIR = $(DIR)/obj/
 OUTPUT_DIR = $(DIR)/build/
