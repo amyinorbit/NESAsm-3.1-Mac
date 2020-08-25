@@ -1,6 +1,6 @@
 CXX = clang
 CXXFLAGS = -c -O3 -std=c99 -arch x86_64
-LDFLAGS = -arch x86_64 -mmacosx-version-min=10.7
+LDFLAGS = -arch x86_64 -mmacosx-version-min=10.14
 DIR = .
 OBJECTS_DIR = $(DIR)/obj/
 OUTPUT_DIR = $(DIR)/build/
@@ -14,6 +14,7 @@ FILES = $(OBJECTS_DIR)assemble.o \
 	$(OBJECTS_DIR)input.o \
 	$(OBJECTS_DIR)macro.o \
 	$(OBJECTS_DIR)main.o \
+  1
 	$(OBJECTS_DIR)map.o \
 	$(OBJECTS_DIR)mml.o \
 	$(OBJECTS_DIR)nes.o \
