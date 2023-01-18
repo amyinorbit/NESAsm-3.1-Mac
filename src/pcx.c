@@ -290,7 +290,7 @@ pcx_get_args(int *ip)
 		if (expr_lablcnt == 0)
 			error("No tile table reference!");
 		if (expr_lablcnt > 1) {
-			expr_lablcnt = NULL;
+			expr_lablcnt = 0; // NULL;
 			error("Too many tile table references!");
 		}
 		if (!pcx_set_tile(expr_lablptr, value))
